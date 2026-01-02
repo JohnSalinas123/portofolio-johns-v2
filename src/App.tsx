@@ -1,35 +1,63 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useEffect, useRef, useState } from "react";
+import "./App.css";
+import { Canvas } from "@react-three/fiber";
+import { GUI } from "lil-gui";
+import { StarsBackground } from "./components/StarsBackground";
+import { OrbitControls, PerspectiveCamera } from "@react-three/drei";
+import { CameraRig } from "./components/CameraRig";
+import { Container, Group, HStack, Link, Stack, Text } from "@chakra-ui/react";
+
+import "./components/content/Content.css";
+
+import { Navbar } from "./components/Navbar";
+import { AboutMe } from "./components/content/AboutMe";
+import { FeaturedProjects } from "./components/content/FeaturedProjects";
+import { Experience } from "./components/content/Experience";
+import { Education } from "./components/content/Education";
+
+// type Parameters {
+//   rotation :
+// }
 
 function App() {
-  const [count, setCount] = useState(0)
+	const navRef = useRef<HTMLDivElement | null>(null);
+	const [navHeight, setNavHeight] = useState<number>(0);
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+	useEffect(() => {
+		if (navRef.current) {
+			setNavHeight(navRef.current.offsetHeight);
+		}
+	}, []);
+
+	return (
+		<>
+			<div id="canvas-container">
+				<Canvas>
+					<PerspectiveCamera
+						makeDefault
+						fov={35}
+						position={[0, 0, 6]}
+						near={0.1}
+						far={100}
+					/>
+					<CameraRig objectDistance={4} />
+					<StarsBackground count={3000} boxSize={10} objectDistance={4} />
+				</Canvas>
+			</div>
+
+			<Stack
+				className="main-content"
+				style={{ paddingTop: navHeight + 32 + 112 }}
+				gap={45}
+			>
+				<Navbar />
+				<AboutMe />
+				<FeaturedProjects />
+				<Experience />
+				<Education />
+			</Stack>
+		</>
+	);
 }
 
-export default App
+export default App;
