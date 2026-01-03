@@ -1,11 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 import "./App.css";
 import { Canvas } from "@react-three/fiber";
-import { GUI } from "lil-gui";
 import { StarsBackground } from "./components/StarsBackground";
-import { OrbitControls, PerspectiveCamera } from "@react-three/drei";
+import { PerspectiveCamera } from "@react-three/drei";
 import { CameraRig } from "./components/CameraRig";
-import { Container, Group, HStack, Link, Stack, Text } from "@chakra-ui/react";
+import { Stack } from "@chakra-ui/react";
 
 import "./components/content/Content.css";
 
@@ -14,6 +13,7 @@ import { AboutMe } from "./components/content/AboutMe";
 import { FeaturedProjects } from "./components/content/FeaturedProjects";
 import { Experience } from "./components/content/Experience";
 import { Education } from "./components/content/Education";
+import { Footer } from "./components/content/Footer";
 
 // type Parameters {
 //   rotation :
@@ -41,7 +41,7 @@ function App() {
 						far={100}
 					/>
 					<CameraRig objectDistance={4} />
-					<StarsBackground count={3000} boxSize={10} objectDistance={4} />
+					<StarsBackground count={5000} boxSize={10} objectDistance={4} />
 				</Canvas>
 			</div>
 
@@ -56,6 +56,7 @@ function App() {
 				<Experience />
 				<Education />
 			</Stack>
+			<Footer />
 		</>
 	);
 }

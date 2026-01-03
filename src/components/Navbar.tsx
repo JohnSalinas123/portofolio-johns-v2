@@ -1,5 +1,4 @@
 import { Container, HStack, Link, Text } from "@chakra-ui/react";
-import { useEffect, useRef, useState } from "react";
 
 import classes from "./Navbar.module.css";
 

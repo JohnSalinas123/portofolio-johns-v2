@@ -25,4 +25,5 @@ html {
 .main-content {
 	max-width: 1130px;
 	margin: 0 auto;
+	padding-bottom: 250px;
 }
