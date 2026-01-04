@@ -1,0 +1,15 @@
+.date {
+	white-space: nowrap;
+}
+
+.content {
+	max-width: 680px;
+}
+
+.title {
+	font-size: 17px;
+}
+
+.description {
+	font-weight: 300;
+}

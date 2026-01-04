@@ -1,0 +1,37 @@
+:root {
+	--primary: #1f92f6;
+}
+
+.section-title {
+	font-size: 26px;
+	font-weight: 500;
+	font-family: "JetBrains Mono", monospace;
+}
+
+.bold {
+	font-weight: 700;
+}
+
+.jetbrains-mono {
+	font-family: "JetBrains Mono", monospace;
+}
+
+.inter {
+	font-family: "inter", system-ui;
+}
+
+.dark-text {
+	color: #7a7a7a;
+}
+
+.colored-text {
+	color: var(--primary);
+}
+
+.faded-text {
+	color: #b7b7b7;
+}
+
+.underlined-text {
+	text-decoration: underline;
+}

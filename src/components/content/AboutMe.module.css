@@ -1,0 +1,10 @@
+.model-placeholder {
+	background-color: #d9d9d9;
+	min-width: 250px;
+	height: 250px;
+	border-radius: 20px;
+}
+
+.text {
+	font-size: 16px;
+}

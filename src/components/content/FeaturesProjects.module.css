@@ -1,0 +1,41 @@
+.container {
+	margin-top: 32px;
+}
+
+.image {
+	border-radius: 8px;
+	height: 230px;
+}
+
+.title {
+	font-size: 24px;
+	font-weight: 500;
+	margin-top: 16px;
+}
+
+.description-container {
+}
+
+.description {
+	margin-top: 2px;
+}
+
+.skill {
+	background-color: #2f2f2f81;
+	color: rgb(255, 255, 255);
+	padding: 1px 10px;
+	border: 1px solid #2f2f2f;
+	border-radius: 20px;
+	display: inline-block;
+}
+
+.links {
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.link-disabled {
+	color: grey;
+	text-decoration: line-through;
+	cursor: default;
+}

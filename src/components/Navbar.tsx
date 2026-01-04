@@ -1,0 +1,35 @@
+import { Container, HStack, Icon, Link, Text } from "@chakra-ui/react";
+
+import classes from "./Navbar.module.css";
+
+import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { IoIosMail } from "react-icons/io";
+
+export function Navbar() {
+	return (
+		<Container className={classes.container}>
+			<HStack justify="space-between" gap={20} className="jetbrains-mono">
+				<HStack gap={8}>
+					<Link variant="plain">About me</Link>
+					<Link variant="plain">Experience</Link>
+					<Link variant="plain">Projects</Link>
+				</HStack>
+				<HStack>
+					<Text>John Salinas @ 2025</Text>
+					<Text>|</Text>
+					<Icon className={classes.icon}>
+						<FaLinkedin />
+					</Icon>
+					<Text>|</Text>
+					<Icon className={classes.icon}>
+						<IoIosMail />
+					</Icon>
+					<Text>|</Text>
+					<Icon className={classes.icon}>
+						<FaGithub />
+					</Icon>
+				</HStack>
+			</HStack>
+		</Container>
+	);
+}
