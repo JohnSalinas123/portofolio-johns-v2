@@ -13,23 +13,22 @@ export function AboutMe() {
 							<Text className={classes.text}>
 								I’m a recent graduate from California State Polytechnic
 								University, Pomona with a{" "}
-								<span className="colored-text">
+								<span className="bold">
 									Bachelor's Degree in Computer Science
 								</span>
-								. Through{" "}
-								<span className="colored-text">leading group projects</span>,{" "}
-								<span className="colored-text">internships</span>, and ongoing{" "}
-								<span className="colored-text">self-study</span>, I’ve built a
-								solid foundation in software development.
+								. Through <span className="bold">leading group projects</span>,{" "}
+								<span className="bold">internships</span>, and ongoing{" "}
+								<span className="bold">self-study</span>, I’ve built a solid
+								foundation in software development.
 							</Text>
 							<Text className={classes.text}>
 								I’m passionate about expanding my professional skill set
 								alongside my creative hobbies such as{" "}
-								<span className="colored-text">3D modeling</span>,
-								<span className="colored-text"> wood carving</span> , and{" "}
-								<span className="colored-text">digital art</span>. While I’m
-								developing these skills, I enjoy the process of learning and
-								continuously improving through practice.
+								<span className="bold">3D modeling</span>,
+								<span className="bold"> wood carving</span> , and{" "}
+								<span className="bold">digital art</span>. While I’m developing
+								these skills, I enjoy the process of learning and continuously
+								improving through practice.
 							</Text>
 						</VStack>
 					</Stack>

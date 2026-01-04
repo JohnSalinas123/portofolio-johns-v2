@@ -64,7 +64,7 @@ function ExperienceItem({
 	return (
 		<>
 			<HStack align="start" justify="space-between">
-				<Text className={classes.date}>{dateText}</Text>
+				<Text className={`${classes.date} jetbrains-mono`}>{dateText}</Text>
 				<VStack align="start" className={classes.content}>
 					<Text className={`${classes.title} jetbrains-mono`}>
 						{titleText}

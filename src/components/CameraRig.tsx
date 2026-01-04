@@ -24,7 +24,6 @@ export function CameraRig({ objectDistance }: CameraRigProps) {
 		// Scroll
 		window.addEventListener("scroll", () => {
 			scrollY.current = window.scrollY;
-			console.log("scroll");
 		});
 	});
 

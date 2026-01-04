@@ -4,7 +4,7 @@ import { Canvas } from "@react-three/fiber";
 import { StarsBackground } from "./components/StarsBackground";
 import { PerspectiveCamera } from "@react-three/drei";
 import { CameraRig } from "./components/CameraRig";
-import { Stack } from "@chakra-ui/react";
+import { Stack, VStack } from "@chakra-ui/react";
 
 import "./components/content/Content.css";
 
@@ -44,19 +44,20 @@ function App() {
 					<StarsBackground count={5000} boxSize={10} objectDistance={4} />
 				</Canvas>
 			</div>
-
-			<Stack
-				className="main-content"
-				style={{ paddingTop: navHeight + 32 + 112 }}
-				gap={45}
-			>
-				<Navbar />
-				<AboutMe />
-				<FeaturedProjects />
-				<Experience />
-				<Education />
-			</Stack>
-			<Footer />
+			<VStack>
+				<Stack
+					className="main-content"
+					style={{ paddingTop: navHeight + 32 + 112 }}
+					gap={45}
+				>
+					<Navbar />
+					<AboutMe />
+					<FeaturedProjects />
+					<Experience />
+					<Education />
+				</Stack>
+				<Footer />
+			</VStack>
 		</>
 	);
 }

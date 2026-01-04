@@ -1,6 +1,9 @@
-import { Container, HStack, Link, Text } from "@chakra-ui/react";
+import { Container, HStack, Icon, Link, Text } from "@chakra-ui/react";
 
 import classes from "./Navbar.module.css";
+
+import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { IoIosMail } from "react-icons/io";
 
 export function Navbar() {
 	return (
@@ -13,6 +16,18 @@ export function Navbar() {
 				</HStack>
 				<HStack>
 					<Text>John Salinas @ 2025</Text>
+					<Text>|</Text>
+					<Icon className={classes.icon}>
+						<FaLinkedin />
+					</Icon>
+					<Text>|</Text>
+					<Icon className={classes.icon}>
+						<IoIosMail />
+					</Icon>
+					<Text>|</Text>
+					<Icon className={classes.icon}>
+						<FaGithub />
+					</Icon>
 				</HStack>
 			</HStack>
 		</Container>
