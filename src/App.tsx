@@ -32,25 +32,18 @@ function App() {
 	return (
 		<>
 			<div id="canvas-container">
-				<Canvas>
-					<PerspectiveCamera
-						makeDefault
-						fov={35}
-						position={[0, 0, 6]}
-						near={0.1}
-						far={100}
-					/>
+				<Canvas eventSource={document.body} eventPrefix="client">
 					<CameraRig objectDistance={4} />
 					<StarsBackground count={5000} boxSize={10} objectDistance={4} />
 				</Canvas>
 			</div>
-			<VStack>
+			<VStack width="100%">
+				<Navbar />
 				<Stack
 					className="main-content"
 					style={{ paddingTop: navHeight + 32 + 112 }}
 					gap={45}
 				>
-					<Navbar />
 					<AboutMe />
 					<FeaturedProjects />
 					<Experience />
