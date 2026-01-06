@@ -207,7 +207,7 @@ function ProjectItem({
 				</Stack>
 				<Flex gap={2} wrap="wrap" mt={5}>
 					{skillsArray.map((skillStr) => (
-						<div className={classes.skill}>
+						<div key={skillStr} className={classes.skill}>
 							<Text>{skillStr}</Text>
 						</div>
 					))}
@@ -216,6 +216,7 @@ function ProjectItem({
 					{linksArray.map((linkItem) =>
 						linkItem.enabled ? (
 							<Link
+								key={linkItem.url}
 								href={linkItem.url}
 								target="_blank"
 								className="colored-text"
