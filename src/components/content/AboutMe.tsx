@@ -1,6 +1,9 @@
 import { Container, HStack, Stack, Text, VStack } from "@chakra-ui/react";
 
 import classes from "./AboutMe.module.css";
+import { DisplayModel } from "./DisplayModel";
+import { Canvas } from "@react-three/fiber";
+import { PerspectiveCamera } from "@react-three/drei/core";
 
 export function AboutMe() {
 	return (
@@ -32,7 +35,12 @@ export function AboutMe() {
 							</Text>
 						</VStack>
 					</Stack>
-					<div className={classes["model-placeholder"]}></div>
+					<div className={classes["model-placeholder"]}>
+						<Canvas gl={{ alpha: true }} style={{ background: "transparent" }}>
+							<DisplayModel />
+							<PerspectiveCamera fov={15} position={[0, 0, 25]} />
+						</Canvas>
+					</div>
 				</HStack>
 			</Container>
 		</>
