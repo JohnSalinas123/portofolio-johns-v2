@@ -1,14 +1,17 @@
-import { Container, HStack, Icon, Link, Text } from "@chakra-ui/react";
+import { Container, HStack, Icon, Text } from "@chakra-ui/react";
 
 import classes from "./Navbar.module.css";
 
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 import { useEffect, useRef, useState } from "react";
+import { NavLink } from "react-router";
 
 export function Navbar() {
 	const lastScrollY = useRef(0);
 	const ticking = useRef(false);
+
+	// let location = useLocation();
 
 	const [hidden, setHidden] = useState(false);
 	const [scrolled, setScrolled] = useState(false);
@@ -41,6 +44,12 @@ export function Navbar() {
 		return () => window.removeEventListener("scroll", onScroll);
 	}, []);
 
+	const handleDynamicLinkClick = (pathname: string) => {
+		const element = document.getElementById(pathname);
+		element?.scrollIntoView(true);
+		element?.scrollIntoView({ behavior: "smooth" });
+	};
+
 	return (
 		<div
 			className={[
@@ -54,9 +63,21 @@ export function Navbar() {
 			<Container className={classes["inner-container"]}>
 				<HStack justify="space-between" gap={20} className="jetbrains-mono">
 					<HStack gap={16}>
-						<Link variant="plain">About me</Link>
-						<Link variant="plain">Experience</Link>
-						<Link variant="plain">Projects</Link>
+						<NavLink className={classes.nav} to="/">
+							About me
+						</NavLink>
+						<a
+							onClick={() => handleDynamicLinkClick("experience")}
+							className={classes.nav}
+						>
+							Experience
+						</a>
+						<NavLink className={classes.nav} to="/projects">
+							Projects
+						</NavLink>
+						<NavLink className={classes.nav} to="/art">
+							Art
+						</NavLink>
 					</HStack>
 					<HStack>
 						<Text>John Salinas @ 2025</Text>

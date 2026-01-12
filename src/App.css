@@ -4,13 +4,14 @@
 }
 
 #root {
-	height: 200vh;
+	height: 100vh;
 	width: 100vw;
 }
 
 html {
 	background-color: #1e1a20;
 	color: white;
+	scroll-behavior: smooth;
 }
 
 #canvas-container {
@@ -22,8 +23,14 @@ html {
 	height: 100%;
 	width: 100%;
 }
+
 .main-content {
 	max-width: 1200px;
+	min-height: 100vh;
 	margin: 0 auto;
 	padding-bottom: 200px;
 }
+/* 
+.app {
+	scroll-behavior: smooth;
+} */
