@@ -30,16 +30,6 @@ export function CameraRig({ objectDistance }: CameraRigProps) {
 		camera.position.y = (-scrollY.current / size.height) * objectDistance;
 	});
 
-	useFrame((state, delta) => {
-		if (!group.current) return;
-
-		group.current.position.x +=
-			(state.pointer.x - group.current.position.x) * 2 * delta;
-
-		group.current.position.y +=
-			(state.pointer.y - group.current.position.y) * 2 * delta;
-	});
-
 	return (
 		<group ref={group}>
 			<PerspectiveCamera
