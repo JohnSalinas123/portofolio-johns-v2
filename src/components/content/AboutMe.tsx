@@ -38,7 +38,7 @@ export function AboutMe() {
 					<div className={classes["model-placeholder"]}>
 						<Canvas gl={{ alpha: true }} style={{ background: "transparent" }}>
 							<DisplayModel />
-							<PerspectiveCamera fov={15} position={[0, 0, 25]} />
+							<PerspectiveCamera makeDefault fov={10} position={[0, 0, 44]} />
 						</Canvas>
 					</div>
 				</HStack>

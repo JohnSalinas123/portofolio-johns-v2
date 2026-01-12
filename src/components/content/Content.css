@@ -35,3 +35,16 @@
 .underlined-text {
 	text-decoration: underline;
 }
+
+.skill {
+	background-color: #2f2f2f81;
+	color: rgb(255, 255, 255);
+	padding: 1px 10px;
+	border: 1px solid #2f2f2f;
+	border-radius: 20px;
+	display: inline-block;
+}
+
+canvas {
+	pointer-events: none;
+}
