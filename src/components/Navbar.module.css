@@ -27,3 +27,15 @@
 .nav {
 	color: white;
 }
+
+.media {
+	color: white;
+}
+
+.media:hover {
+	transform: scale(1.05);
+}
+
+.text-ignore {
+	cursor: initial;
+}

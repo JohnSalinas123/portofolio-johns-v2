@@ -10,8 +10,5 @@
 
 a {
 	text-decoration: none;
-}
-
-a.active {
-	color: var(--primary);
+	cursor: pointer;
 }
