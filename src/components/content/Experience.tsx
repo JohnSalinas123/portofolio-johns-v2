@@ -1,11 +1,11 @@
-import { Container, HStack, Stack, Text, VStack } from "@chakra-ui/react";
+import { Container, Flex, HStack, Stack, Text, VStack } from "@chakra-ui/react";
 
 import classes from "./Experience.module.css";
 
 export function Experience() {
 	return (
 		<>
-			<Container>
+			<Container id="experience-section" className={classes.experience}>
 				<Stack>
 					<Text className="section-title"> Experience</Text>
 					<Stack mt={10} gap={12}>
@@ -16,6 +16,7 @@ export function Experience() {
 							descriptionText={
 								"Worked with the ServiceNow team to create applications for internal clients, tailoring solutions to business needs, and improving process efficiency. This involved collaborating directly with stakeholders and iterating with them through the development process when needed. Additionally, performed quality assurance testing on existing applications before shipping to production."
 							}
+							skillsArray={["ServiceNow", "Javascript", "Docker"]}
 						/>
 						<ExperienceItem
 							dateText={"11/2022 - 09/2023"}
@@ -24,6 +25,7 @@ export function Experience() {
 							descriptionText={
 								"Worked with multiple teams on technical projects, including several associated with the Google Solutions Challenge. Managed teams to ensure they stay on track to meet project goals, and assisted team leads with project management tools to help their teams work efficiently. Additionally, supported club leadership by providing feedback and suggestions to improve event messaging across social media and other communication platforms."
 							}
+							skillsArray={["Leadership", "Figma"]}
 						/>
 						<ExperienceItem
 							dateText={"02/2022 - 06/2023"}
@@ -32,6 +34,7 @@ export function Experience() {
 							descriptionText={
 								"Worked as part of the iOS development team to build key features essential to app functionality using Swift and SwiftUI. Participated in weekly planning meetings to discuss feature design and implementation. Contributed to features such as status updates, availability management, and event invitations. Integrated third-party APIs, such as Google Places for event location autocomplete and Apple Calendar. Additionally, worked on real-time communication features using WebSockets, including group invites, GIF messaging, and chat delivery statuses."
 							}
+							skillsArray={["Swift", "SwiftUI", "Django"]}
 						/>
 						<ExperienceItem
 							dateText={"07/2019 - 07/2020"}
@@ -40,6 +43,11 @@ export function Experience() {
 							descriptionText={
 								"Supervised a computer lab in the Life & Physical Science department, assisting students with technical or software issues. Provided support to professors using the computer lab for classes and maintained lab equipment and resources. Set up computers throughout the department buildings over the summer, including desktops, monitors, and peripherals, to prepare for upcoming semester classes."
 							}
+							skillsArray={[
+								"Supervision",
+								"Software Troubleshooting",
+								"Hardware Installation",
+							]}
 						/>
 					</Stack>
 				</Stack>
@@ -53,6 +61,7 @@ interface ExperienceItemProps {
 	titleText: string;
 	companyText: string;
 	descriptionText: string;
+	skillsArray: string[];
 }
 
 function ExperienceItem({
@@ -60,13 +69,14 @@ function ExperienceItem({
 	titleText,
 	companyText,
 	descriptionText,
+	skillsArray,
 }: ExperienceItemProps) {
 	return (
 		<>
 			<HStack align="start" justify="space-between">
-				<Text className={`${classes.date} jetbrains-mono`}>{dateText}</Text>
+				<Text className={classes.date}>{dateText}</Text>
 				<VStack align="start" className={classes.content}>
-					<Text className={`${classes.title} jetbrains-mono`}>
+					<Text className={classes.title}>
 						{titleText}
 						<span className="dark-text"> @ </span>
 						<span className="colored-text">{companyText}</span>
@@ -74,6 +84,13 @@ function ExperienceItem({
 					<Container pl={3} className="inter">
 						<Text className={classes.description}>{descriptionText}</Text>
 					</Container>
+					<Flex gap={2} wrap="wrap" mt={2}>
+						{skillsArray.map((skillStr) => (
+							<div key={skillStr} className="skill">
+								<Text>{skillStr}</Text>
+							</div>
+						))}
+					</Flex>
 				</VStack>
 			</HStack>
 		</>
