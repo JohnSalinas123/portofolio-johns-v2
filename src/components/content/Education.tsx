@@ -8,7 +8,7 @@ export function Education() {
 			<Container>
 				<Stack>
 					<Text className="section-title"> Education</Text>
-					<Stack className="jetbrains-mono" mt={10} gap={12}>
+					<Stack mt={10} gap={12}>
 						<EducationItem
 							dateText={"07/2024 - 09/2024"}
 							titleText={"Machine Learning Specialization by Andrew Ng"}
