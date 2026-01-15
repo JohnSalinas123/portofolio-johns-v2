@@ -20,25 +20,25 @@ export function DisplayModel() {
 		<>
 			<group
 				ref={myMesh}
-				rotation={[0, 0, THREE.MathUtils.degToRad(-23.44)]}
+				rotation={[0, 0, THREE.MathUtils.degToRad(-45.0)]}
 				position={[0, 0, -0.25]}
 				scale={3}
 			>
 				<EarthGLB />
 			</group>
 
-			<ambientLight intensity={3} />
-			<directionalLight intensity={2} position={[-10, 0, 7]} />
-			<directionalLight intensity={2} position={[10, 0, 7]} />
-			<directionalLight intensity={2} position={[0, -10, 7]} />
-			<directionalLight intensity={2} position={[0, 10, 7]} />
+			<ambientLight intensity={1} />
+			<directionalLight intensity={1} position={[-10, 0, 7]} />
+			<directionalLight intensity={1} position={[10, 0, 7]} />
+			<directionalLight intensity={1} position={[0, -10, 7]} />
+			<directionalLight intensity={1} position={[0, 10, 7]} />
 
 			<EffectComposer>
 				<Bloom
-					intensity={0.1}
+					intensity={0.05}
 					blurPass={undefined}
 					kernelSize={KernelSize.LARGE}
-					luminanceThreshold={0.3}
+					luminanceThreshold={0.6}
 					luminanceSmoothing={0.025}
 					mipmapBlur={false}
 					resolutionX={Resolution.AUTO_SIZE}

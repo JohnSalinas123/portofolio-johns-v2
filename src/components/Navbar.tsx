@@ -70,7 +70,7 @@ export function Navbar() {
 				.join(" ")}
 		>
 			<Container className={classes["inner-container"]}>
-				<HStack justify="space-between" gap={20} className="jetbrains-mono">
+				<HStack justify="space-between" gap={20}>
 					<HStack gap={16}>
 						<NavLink className={classes.nav} to="/">
 							About me
