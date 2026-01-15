@@ -1,19 +1,15 @@
 :root {
 	--primary: #1f92f6;
+	--black: #;
 }
 
 .section-title {
 	font-size: 26px;
 	font-weight: 500;
-	font-family: "JetBrains Mono", monospace;
 }
 
 .bold {
-	font-weight: 700;
-}
-
-.jetbrains-mono {
-	font-family: "JetBrains Mono", monospace;
+	font-weight: 500;
 }
 
 .inter {
@@ -37,10 +33,9 @@
 }
 
 .skill {
-	background-color: #2f2f2f81;
-	color: rgb(255, 255, 255);
+	background-color: #d1d1d181;
 	padding: 1px 10px;
-	border: 1px solid #2f2f2f;
+	color: grey;
 	border-radius: 20px;
 	display: inline-block;
 }

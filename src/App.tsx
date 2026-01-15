@@ -17,12 +17,6 @@ import { Outlet } from "react-router";
 function App() {
 	return (
 		<>
-			<div id="canvas-container">
-				<Canvas eventSource={document.body} eventPrefix="client">
-					<CameraRig objectDistance={4} />
-					<StarsBackground count={5000} boxSize={10} objectDistance={4} />
-				</Canvas>
-			</div>
 			<VStack width="100%" className="app">
 				<Navbar />
 				<Outlet />
