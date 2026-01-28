@@ -11,12 +11,19 @@ export function CameraRig({ objectDistance }: CameraRigProps) {
 	const group = useRef<THREE.Group>(null);
 	const { size } = useThree();
 
+	const cursor = useRef({ x: 0, y: 0 });
 	const scrollY = useRef(0);
 
 	useEffect(() => {
 		const onScroll = () => {
 			scrollY.current = window.scrollY;
 		};
+
+		window.addEventListener("mousemove", (event) => {
+			cursor.current.x = event.clientX / size.width - 0.5;
+			cursor.current.y = event.clientY / size.height - 0.5;
+			// console.log("mouse move");
+		});
 
 		// Scroll
 		window.addEventListener("scroll", onScroll);
@@ -28,6 +35,15 @@ export function CameraRig({ objectDistance }: CameraRigProps) {
 
 	useFrame(({ camera, size }) => {
 		camera.position.y = (-scrollY.current / size.height) * objectDistance;
+	});
+
+	useFrame((_, delta) => {
+		if (!group.current) return;
+
+		group.current.position.x +=
+			(cursor.current.x - group.current?.position.x) * 5 * delta;
+		group.current.position.y +=
+			(-cursor.current.y - group.current?.position.y) * 5 * delta;
 	});
 
 	return (

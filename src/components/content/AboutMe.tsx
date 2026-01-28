@@ -1,4 +1,4 @@
-import { Container, HStack, Stack, Text, VStack } from "@chakra-ui/react";
+import { Stack, Text, VStack } from "@chakra-ui/react";
 
 import classes from "./AboutMe.module.css";
 import { DisplayModel } from "./DisplayModel";
@@ -6,46 +6,58 @@ import { Canvas } from "@react-three/fiber";
 import { PerspectiveCamera } from "@react-three/drei/core";
 import { CameraRig } from "../CameraRig";
 import { StarsBackground } from "../StarsBackground";
+import { useEffect, useRef, useState } from "react";
 
 export function AboutMe() {
+	const navRef = useRef<HTMLDivElement | null>(null);
+	const [navHeight, setNavHeight] = useState<number>(0);
+
+	useEffect(() => {
+		if (navRef.current) {
+			setNavHeight(navRef.current.offsetHeight);
+		}
+	}, []);
+
 	return (
 		<>
-			<div className={classes.aboutme}>
-				<div className={classes.canvasBackground}>
+			<div className={classes.aboutme} style={{ paddingTop: navHeight + 88 }}>
+				<div className="stars-background-box">
 					<Canvas eventSource={document.body} eventPrefix="client">
 						<CameraRig objectDistance={4} />
-						<StarsBackground count={1000} boxSize={10} objectDistance={3} />
+						<StarsBackground count={2000} boxSize={10} objectDistance={3} />
 					</Canvas>
 				</div>
-
-				<HStack gap={20} className={classes.window}>
-					<Stack>
-						<Text className="section-title">About me</Text>
-						<VStack gap={5} className="inter">
-							<Text className={classes.text}>
-								I’m a graduate from California State Polytechnic University,
-								Pomona with a Bachelor's Degree in Computer Science . Through{" "}
-								<span className="bold">leading group projects</span>,{" "}
-								<span className="bold">internships</span>, and ongoing{" "}
-								<span className="bold">self-study</span>, I’ve built a solid
-								foundation in software development.
+				<div className={classes.innerContainer}>
+					<Stack
+						gap={20}
+						className={classes.window}
+						direction={{ base: "column", md: "column", lg: "row" }}
+					>
+						<VStack align="start" gap={2}>
+							<Text
+								className={classes.title}
+								style={{ textDecoration: "underline" }}
+							>
+								Hi, I'm John!
 							</Text>
 							<Text className={classes.text}>
-								I’m passionate about expanding my professional skill set
-								alongside my creative hobbies such as 3D modeling, wood carving
-								, and digital art. While I’m developing these skills, I enjoy
-								the process of learning and continuously improving through
-								practice.
+								I’m driven by the challenge of turning ideas into intuitive
+								software people enjoy using. I focus on building thoughtful,
+								maintainable solutions while continuously growing my technical
+								skills.
 							</Text>
 						</VStack>
+						<div className={classes["model-placeholder"]}>
+							<Canvas
+								gl={{ alpha: true }}
+								style={{ background: "transparent" }}
+							>
+								<DisplayModel />
+								<PerspectiveCamera makeDefault fov={10} position={[0, 0, 44]} />
+							</Canvas>
+						</div>
 					</Stack>
-					<div className={classes["model-placeholder"]}>
-						<Canvas gl={{ alpha: true }} style={{ background: "transparent" }}>
-							<DisplayModel />
-							<PerspectiveCamera makeDefault fov={10} position={[0, 0, 44]} />
-						</Canvas>
-					</div>
-				</HStack>
+				</div>
 			</div>
 		</>
 	);

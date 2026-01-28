@@ -45,13 +45,6 @@ export function DisplayModel() {
 					resolutionY={Resolution.AUTO_SIZE}
 				/>
 			</EffectComposer>
-			<RenderCheck />
 		</>
 	);
-}
-
-function RenderCheck() {
-	console.log("RENDER");
-
-	return <></>;
 }

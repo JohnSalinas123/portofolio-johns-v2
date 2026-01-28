@@ -14,9 +14,7 @@ html {
 }
 
 .main-content {
-	max-width: 1200px;
 	min-height: 100vh;
-	margin: 0 auto;
 	padding-bottom: 200px;
 }
 
