@@ -1,10 +1,18 @@
+.featured-projects {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
 .container {
 	margin-top: 32px;
+	max-width: 400px;
 }
 
 .image {
 	border-radius: 8px;
 	height: 300px;
+	width: 100%;
+	object-position: center top;
 }
 
 .title {
@@ -15,6 +23,8 @@
 
 .description-container {
 	font-size: 16px;
+	width: 100%;
+	overflow-wrap: normal;
 }
 
 .description {

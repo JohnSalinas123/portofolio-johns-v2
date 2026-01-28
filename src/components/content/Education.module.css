@@ -1,9 +1,15 @@
+.education {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
 .date {
 	white-space: nowrap;
 }
 
 .content {
-	width: 680px;
+	min-width: 400px;
 }
 
 .title {

@@ -1,5 +1,4 @@
 import {
-	Container,
 	Stack,
 	Text,
 	VStack,
@@ -28,170 +27,165 @@ import type { ReactNode } from "react";
 export function FeaturedProjects() {
 	return (
 		<>
-			<Container>
-				<Stack align="start">
+			<div className={classes["featured-projects"]}>
+				<Stack className="section" align={{ base: "center", md: "normal" }}>
 					<Text className="section-title"> Featured Projects</Text>
-					<Container>
-						<SimpleGrid justifyItems="center" columns={3} gap="32px">
-							<ProjectItem
-								imageSrc={linguachatImage}
-								titleText={"LinguaChat"}
-								descriptionText={
-									"A real-time chat translation app designed to bridge language barriers"
-								}
-								subDescriptionText={
-									"→ I've always wanted to travel so I made this app and focused on making the chat invitation process easy to initiate and therefore allow for the app to be used on the go."
-								}
-								skillsArray={[
-									"React",
-									"CSS",
-									"PyTorch",
-									"CSS",
-									"Go",
-									"PostgreSQL",
-								]}
-								linksArray={[
-									{
-										enabled: true,
-										icon: <FaGithub />,
-										text: "GitHub",
-										url: "https://github.com/JohnSalinas123/linguachat-frontend",
-									},
-								]}
-								border={true}
-							/>
-							<ProjectItem
-								imageSrc={weeklyImage}
-								titleText={"Weekly"}
-								descriptionText={
-									"A mobile application to help bring friends together for events and activities"
-								}
-								subDescriptionText={
-									"→ I worked as part of the iOS development team and took ownership of several components including status updates, event invitations, chat features, and availability management."
-								}
-								skillsArray={["Swift", "SwiftUI", "Django", "Xcode", "Figma"]}
-								linksArray={[
-									{
-										enabled: false,
-										icon: <IoLogoAppleAppstore />,
-										text: "App Store",
-										url: "https://apps.apple.com/us/app/weekly-calendar-for-friends/id1596555762",
-									},
-								]}
-								border={false}
-							/>
-							<ProjectItem
-								imageSrc={portofolio_v2}
-								titleText={"Portofolio v2"}
-								descriptionText={
-									"This portofolio I made to display my projects and experience"
-								}
-								subDescriptionText={
-									"→ I really enjoy 3D modeling and a low poly look so I've added some elements such as the earth model and the background of stars that uses custom shaders."
-								}
-								skillsArray={[
-									"React",
-									"CSS",
-									"PyTorch",
-									"Gin",
-									"Go",
-									"PostgreSQL",
-								]}
-								linksArray={[
-									{
-										enabled: true,
-										icon: <FaGithub />,
-										text: "GitHub",
-										url: "https://github.com/FiveFineCoders/CPP_EventMap",
-									},
-								]}
-								border={true}
-							/>
-							<ProjectItem
-								imageSrc={cppeventmapImage}
-								titleText={"CPPEventMap"}
-								descriptionText={
-									"A web application for students of Cal Poly Pomona to easily find where events are occurring on or near campus."
-								}
-								subDescriptionText={
-									"→ I was the team lead of 5 peers, and led development effectively by bringing my team together to plan out the core features of the application, delegating tasks, and creating mockups using Figma."
-								}
-								skillsArray={[
-									"React",
-									"CSS",
-									"PyTorch",
-									"Gin",
-									"Go",
-									"PostgreSQL",
-								]}
-								linksArray={[
-									{
-										enabled: true,
-										icon: <FaGithub />,
-										text: "GitHub",
-										url: "https://github.com/FiveFineCoders/CPP_EventMap",
-									},
-								]}
-								border={false}
-							/>
-							<ProjectItem
-								imageSrc={appTrackImage}
-								titleText={"AppTrack"}
-								descriptionText={
-									"A web application to help keep track and visualize job applications."
-								}
-								subDescriptionText={
-									"→ I made this app because I needed a focused app just for applications to help in my job hunt."
-								}
-								skillsArray={[
-									"React",
-									"CSS",
-									"PyTorch",
-									"Gin",
-									"Go",
-									"PostgreSQL",
-								]}
-								linksArray={[
-									{
-										enabled: true,
-										icon: <FaGithub />,
-										text: "GitHub",
-										url: "https://github.com/JohnSalinas123/AppTrack",
-									},
-								]}
-								border={false}
-							/>
-							<ProjectItem
-								imageSrc={mybookshelfImage}
-								titleText={"MyBookShelf"}
-								descriptionText={
-									"A desktop electron app to help organize pdf e-books and help with the e-reading experience."
-								}
-								subDescriptionText={
-									"→ I enjoy reading learning material and I wanted a better library-like experience so I made this desktop app."
-								}
-								skillsArray={[
-									"React",
-									"CSS",
-									"PyTorch",
-									"Gin",
-									"Go",
-									"PostgreSQL",
-								]}
-								linksArray={[
-									{
-										enabled: true,
-										icon: <FaGithub />,
-										text: "GitHub",
-										url: "https://github.com/JohnSalinas123/mybookshelf-2",
-									},
-								]}
-								border={false}
-							/>
-						</SimpleGrid>
-					</Container>
+					<SimpleGrid
+						justifyItems="center"
+						columns={{ base: 1, md: 2, lg: 3 }}
+						gap="32px"
+					>
+						<ProjectItem
+							imageSrc={linguachatImage}
+							titleText={"LinguaChat"}
+							descriptionText={
+								"A real-time chat translation app designed to bridge language barriers"
+							}
+							subDescriptionText={
+								"→ I've always wanted to travel so I made this app and focused on making the chat invitation process easy to initiate and therefore allow for the app to be used on the go."
+							}
+							skillsArray={["React", "CSS", "PyTorch", "Go", "PostgreSQL"]}
+							linksArray={[
+								{
+									enabled: true,
+									icon: <FaGithub />,
+									text: "GitHub",
+									url: "https://github.com/JohnSalinas123/linguachat-frontend",
+								},
+							]}
+							border={true}
+						/>
+						<ProjectItem
+							imageSrc={weeklyImage}
+							titleText={"Weekly"}
+							descriptionText={
+								"A mobile application to help bring friends together for events and activities"
+							}
+							subDescriptionText={
+								"→ I worked as part of the iOS development team and took ownership of several components including status updates, event invitations, chat features, and availability management."
+							}
+							skillsArray={["Swift", "SwiftUI", "Django", "Xcode", "Figma"]}
+							linksArray={[
+								{
+									enabled: false,
+									icon: <IoLogoAppleAppstore />,
+									text: "App Store",
+									url: "https://apps.apple.com/us/app/weekly-calendar-for-friends/id1596555762",
+								},
+							]}
+							border={false}
+						/>
+						<ProjectItem
+							imageSrc={portofolio_v2}
+							titleText={"Portofolio v2"}
+							descriptionText={
+								"This portofolio I made to display my projects and experience"
+							}
+							subDescriptionText={
+								"→ I really enjoy 3D modeling and a low poly look so I've added some elements such as the earth model and the background of stars that uses custom shaders."
+							}
+							skillsArray={[
+								"React",
+								"CSS",
+								"PyTorch",
+								"Gin",
+								"Go",
+								"PostgreSQL",
+							]}
+							linksArray={[
+								{
+									enabled: true,
+									icon: <FaGithub />,
+									text: "GitHub",
+									url: "https://github.com/FiveFineCoders/CPP_EventMap",
+								},
+							]}
+							border={true}
+						/>
+						<ProjectItem
+							imageSrc={cppeventmapImage}
+							titleText={"CPPEventMap"}
+							descriptionText={
+								"A web application for students of Cal Poly Pomona to easily find where events are occurring on or near campus."
+							}
+							subDescriptionText={
+								"→ I was the team lead of 5 peers, and led development effectively by bringing my team together to plan out the core features of the application, delegating tasks, and creating mockups using Figma."
+							}
+							skillsArray={[
+								"React",
+								"CSS",
+								"PyTorch",
+								"Gin",
+								"Go",
+								"PostgreSQL",
+							]}
+							linksArray={[
+								{
+									enabled: true,
+									icon: <FaGithub />,
+									text: "GitHub",
+									url: "https://github.com/FiveFineCoders/CPP_EventMap",
+								},
+							]}
+							border={false}
+						/>
+						<ProjectItem
+							imageSrc={appTrackImage}
+							titleText={"AppTrack"}
+							descriptionText={
+								"A web application to help keep track and visualize job applications."
+							}
+							subDescriptionText={
+								"→ I made this app because I needed a focused app just for applications to help in my job hunt."
+							}
+							skillsArray={[
+								"React",
+								"CSS",
+								"PyTorch",
+								"Gin",
+								"Go",
+								"PostgreSQL",
+							]}
+							linksArray={[
+								{
+									enabled: true,
+									icon: <FaGithub />,
+									text: "GitHub",
+									url: "https://github.com/JohnSalinas123/AppTrack",
+								},
+							]}
+							border={false}
+						/>
+						<ProjectItem
+							imageSrc={mybookshelfImage}
+							titleText={"MyBookShelf"}
+							descriptionText={
+								"A desktop electron app to help organize pdf e-books and help with the e-reading experience."
+							}
+							subDescriptionText={
+								"→ I enjoy reading learning material and I wanted a better library-like experience so I made this desktop app."
+							}
+							skillsArray={[
+								"React",
+								"CSS",
+								"PyTorch",
+								"Gin",
+								"Go",
+								"PostgreSQL",
+							]}
+							linksArray={[
+								{
+									enabled: true,
+									icon: <FaGithub />,
+									text: "GitHub",
+									url: "https://github.com/JohnSalinas123/mybookshelf-2",
+								},
+							]}
+							border={false}
+						/>
+					</SimpleGrid>
 				</Stack>
-			</Container>
+			</div>
 		</>
 	);
 }
@@ -217,7 +211,6 @@ function ProjectItem({
 	imageSrc,
 	titleText,
 	descriptionText,
-	subDescriptionText,
 	skillsArray,
 	linksArray,
 	border,
@@ -261,11 +254,11 @@ function ProjectItem({
 								</HStack>
 							</Link>
 						) : (
-							<HStack className={classes["link-disabled"]}>
+							<HStack key={linkItem.url} className={classes["link-disabled"]}>
 								<Icon>{linkItem.icon}</Icon>
 								<Text>{linkItem.text}</Text>
 							</HStack>
-						)
+						),
 					)}
 				</Flex>
 			</VStack>

@@ -8,7 +8,9 @@
 	left: 0;
 
 	transform: translateY(0);
-	transition: transform 0.35s ease, background-color 0.25s ease;
+	transition:
+		transform 0.35s ease,
+		background-color 0.25s ease;
 }
 
 .hidden {
@@ -17,19 +19,21 @@
 
 .scrolled {
 	background-color: rgba(43, 43, 43, 0.9);
+	color: white;
 }
 
 .inner-container {
+	display: flex;
+	flex-grow: 1;
 	max-width: 1200px;
-	padding: 20px 0px;
-}
-
-.nav {
+	padding: 20px 20px;
+	z-index: 100;
+	white-space: nowrap;
 	color: white;
 }
 
 .media {
-	color: white;
+	color: inherit;
 }
 
 .media:hover {
@@ -37,5 +41,36 @@
 }
 
 .text-ignore {
-	cursor: initial;
+	cursor: default;
+}
+
+.burger-nav {
+	padding-top: 50px;
+	padding-bottom: 20px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	color: white;
+}
+
+.burger-toggle {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+}
+
+.burger-menu {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(43, 43, 43, 1);
+	border: 0.5px solid rgba(145, 145, 145, 0.349);
+	width: 500px;
+	border-radius: 10px;
+	color: white;
+
+	padding: 20px;
 }

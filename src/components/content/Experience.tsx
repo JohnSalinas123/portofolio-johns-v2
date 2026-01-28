@@ -1,14 +1,14 @@
-import { Container, Flex, HStack, Stack, Text, VStack } from "@chakra-ui/react";
+import { Container, Flex, Stack, Text, VStack } from "@chakra-ui/react";
 
 import classes from "./Experience.module.css";
 
 export function Experience() {
 	return (
 		<>
-			<Container id="experience-section" className={classes.experience}>
-				<Stack>
+			<div id="experience-section" className={classes.experience}>
+				<Stack className="section" align={{ base: "center", md: "normal" }}>
 					<Text className="section-title"> Experience</Text>
-					<Stack mt={10} gap={12}>
+					<Stack mt={10} gap={12} align={{ base: "center", lg: "normal" }}>
 						<ExperienceItem
 							dateText={"07/2023 - 08/2023"}
 							titleText={"Software Engineering Intern"}
@@ -51,7 +51,7 @@ export function Experience() {
 						/>
 					</Stack>
 				</Stack>
-			</Container>
+			</div>
 		</>
 	);
 }
@@ -73,9 +73,14 @@ function ExperienceItem({
 }: ExperienceItemProps) {
 	return (
 		<>
-			<HStack align="start" justify="space-between">
+			<Stack
+				direction={{ base: "column", md: "column", lg: "row" }}
+				align="start"
+				justify="space-between"
+				style={{ width: "100%" }}
+			>
 				<Text className={classes.date}>{dateText}</Text>
-				<VStack align="start" className={classes.content}>
+				<VStack align="start" pl={{ base: "0px" }} className={classes.content}>
 					<Text className={classes.title}>
 						{titleText}
 						<span className="dark-text"> @ </span>
@@ -92,7 +97,7 @@ function ExperienceItem({
 						))}
 					</Flex>
 				</VStack>
-			</HStack>
+			</Stack>
 		</>
 	);
 }
