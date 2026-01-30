@@ -15,7 +15,7 @@ import linguachatImage from "../../assets/projects/linguachat_image.png";
 import weeklyImage from "../../assets/projects/weekly_image.png";
 import cppeventmapImage from "../../assets/projects/cppeventmap_image.png";
 import mybookshelfImage from "../../assets/projects/mybookshelf_image.png";
-import appTrackImage from "../../assets/projects/appTrack_image.png";
+import appTrackImage from "../../assets/projects/apptrack_image.png";
 import portofolioV2Image from "../../assets/projects/portofoliov2_image.png";
 
 const allProjectsData = rawData as ProjectsData;
