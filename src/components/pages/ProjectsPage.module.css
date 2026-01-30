@@ -1,0 +1,35 @@
+.content {
+	position: relative;
+	width: 100vw;
+	height: 30vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+}
+
+.innerContainer {
+	max-width: 1200px;
+}
+
+.tabTrigger {
+	justify-content: center;
+	width: 100px;
+	color: white;
+}
+
+.triggerList {
+	width: 100%;
+	justify-content: center;
+	position: absolute;
+	top: -40px;
+	border-bottom-width: 0px;
+}
+
+.triggerList::before {
+	border-bottom-width: 0px;
+}
+
+.tabsContent {
+	padding: 50px 40px 0px;
+}

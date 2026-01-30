@@ -1,32 +1,29 @@
-.container {
-	margin-top: 32px;
+.featured-projects {
+	max-width: 1200px;
+	margin: 0 auto;
 }
 
 .image {
 	border-radius: 8px;
-	height: 230px;
+	height: 300px;
+	width: 100%;
+	object-position: center top;
 }
 
 .title {
-	font-size: 24px;
-	font-weight: 500;
+	font-size: 25px;
+	font-weight: 700;
 	margin-top: 16px;
 }
 
 .description-container {
+	font-size: 16px;
+	width: 100%;
+	overflow-wrap: normal;
 }
 
 .description {
 	margin-top: 2px;
-}
-
-.skill {
-	background-color: #2f2f2f81;
-	color: rgb(255, 255, 255);
-	padding: 1px 10px;
-	border: 1px solid #2f2f2f;
-	border-radius: 20px;
-	display: inline-block;
 }
 
 .links {
@@ -38,4 +35,8 @@
 	color: grey;
 	text-decoration: line-through;
 	cursor: default;
+}
+
+.link:hover {
+	text-decoration: underline;
 }

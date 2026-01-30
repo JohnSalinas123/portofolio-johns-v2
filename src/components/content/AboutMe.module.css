@@ -1,10 +1,37 @@
+.aboutme {
+	position: relative;
+	width: 100vw;
+	height: 80vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.innerContainer {
+	max-width: 1200px;
+}
+
 .model-placeholder {
-	background-color: #d9d9d9;
-	min-width: 250px;
+	width: 250px;
 	height: 250px;
 	border-radius: 20px;
+	margin: 0 auto;
+}
+
+.title {
+	font-size: 40px;
+	font-weight: 600;
 }
 
 .text {
-	font-size: 16px;
+	font-size: 20px;
+	max-width: 600px;
+}
+
+.window {
+	position: relative;
+	z-index: 1;
+
+	padding: 40px;
+	color: white;
 }

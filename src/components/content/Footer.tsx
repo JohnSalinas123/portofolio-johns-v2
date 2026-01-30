@@ -9,7 +9,7 @@ export function Footer() {
 				direction="row"
 				justify="center"
 				align="center"
-				className={`${classes.container} jetbrains-mono`}
+				className={classes.container}
 			>
 				<Text>John Salinas @ 2025 | v2 | Based in LA</Text>
 			</Flex>

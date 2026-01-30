@@ -1,0 +1,38 @@
+[
+	{
+		"date": "07/2023 - 08/2023",
+		"title": "Software Developer Intern",
+		"company": "Verisk Analytics",
+		"description": "Worked with the ServiceNow team to create applications for internal clients, tailoring solutions to business needs, and improving process efficiency. This involved collaborating directly with stakeholders and iterating with them through the development process when needed. Additionally, performed quality assurance testing on existing applications before shipping to production.",
+		"skills": [
+			{ "name": "ServiceNow" },
+			{ "name": "JavaScript" },
+			{ "name": "Docker" }
+		]
+	},
+	{
+		"date": "11/2022 - 09/2023",
+		"title": "Technical Project Lead",
+		"company": "Google Developer Student Club CPP",
+		"description": "Worked with multiple teams on technical projects, including several associated with the Google Solutions Challenge. Managed teams to ensure they stay on track to meet project goals, and assisted team leads with project management tools to help their teams work efficiently. Additionally, supported club leadership by providing feedback and suggestions to improve event messaging across social media and other communication platforms.",
+		"skills": [{ "name": "Leadership" }, { "name": "Figma" }]
+	},
+	{
+		"date": "02/2022 - 06/2023",
+		"title": "iOS Developer Intern",
+		"company": "Weekly: Calendar for Friends",
+		"description": "Worked as part of the iOS development team to build key features essential to app functionality using Swift and SwiftUI. Participated in weekly planning meetings to discuss feature design and implementation. Contributed to features such as status updates, availability management, and event invitations. Integrated third-party APIs, such as Google Places for event location autocomplete and Apple Calendar. Additionally, worked on real-time communication features using WebSockets, including group invites, GIF messaging, and chat delivery statuses.",
+		"skills": [{ "name": "Swift" }, { "name": "SwiftUI" }, { "name": "Django" }]
+	},
+	{
+		"date": "07/2019 - 07/2020",
+		"title": "Computer Lab Assistant",
+		"company": "Santa Monica College",
+		"description": "Supervised a computer lab in the Life & Physical Science department, assisting students with technical or software issues. Provided support to professors using the computer lab for classes and maintained lab equipment and resources. Set up computers throughout the department buildings over the summer, including desktops, monitors, and peripherals, to prepare for upcoming semester classes.",
+		"skills": [
+			{ "name": "Supervision" },
+			{ "name": "Software Troubleshooting" },
+			{ "name": "Hardware Installation" }
+		]
+	}
+]
