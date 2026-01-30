@@ -1,0 +1,137 @@
+[
+	{
+		"imageKey": "linguachat",
+		"title": "LinguaChat",
+		"description": "A real-time chat translation app designed to bridge language barriers",
+		"skills": [
+			{ "name": "React" },
+			{ "name": "CSS" },
+			{ "name": "PyTorch" },
+			{ "name": "Go" },
+			{ "name": "PostgreSQL" }
+		],
+		"links": [
+			{
+				"enabled": true,
+				"name": "GitHub",
+				"icon": "github",
+				"url": "https://github.com/JohnSalinas123/linguachat-frontend"
+			}
+		],
+		"border": true
+	},
+	{
+		"imageKey": "weekly",
+		"title": "Weekly",
+		"description": "A mobile application to help bring friends together for events and activities",
+		"subDescription": "→ I worked as part of the iOS development team and took ownership of several components including status updates, event invitations, chat features, and availability management.",
+		"skills": [
+			{ "name": "Swift" },
+			{ "name": "SwiftUI" },
+			{ "name": "Django" },
+			{ "name": "Xcode" },
+			{ "name": "Figma" }
+		],
+		"links": [
+			{
+				"enabled": false,
+				"name": "App Store",
+				"icon": "appstore",
+				"url": "https://apps.apple.com/us/app/weekly-calendar-for-friends/id1596555762"
+			}
+		],
+		"border": false
+	},
+	{
+		"imageKey": "portfoliov2",
+		"title": "Portfolio v2",
+		"description": "This portfolio I made to display my projects and experience.",
+		"subDescription": "→ I really enjoy 3D modeling and a low poly look so I've added some elements such as the earth model and the background of stars that uses custom shaders.",
+		"skills": [
+			{ "name": "React" },
+			{ "name": "CSS" },
+			{ "name": "PyTorch" },
+			{ "name": "Gin" },
+			{ "name": "Go" },
+			{ "name": "PostgreSQL" }
+		],
+		"links": [
+			{
+				"enabled": true,
+				"name": "GitHub",
+				"icon": "github",
+				"url": "https://github.com/FiveFineCoders/CPP_EventMap"
+			}
+		],
+		"border": true
+	},
+	{
+		"imageKey": "cppeventmap",
+		"title": "CPPEventMap",
+		"description": "A web application for students of Cal Poly Pomona to easily find where events are occurring on or near campus.",
+		"subDescription": "→ I was the team lead of 5 peers, and led development effectively by bringing my team together to plan out the core features of the application, delegating tasks, and creating mockups using Figma.",
+		"skills": [
+			{ "name": "React" },
+			{ "name": "CSS" },
+			{ "name": "PyTorch" },
+			{ "name": "Gin" },
+			{ "name": "Go" },
+			{ "name": "PostgreSQL" }
+		],
+		"links": [
+			{
+				"enabled": true,
+				"name": "GitHub",
+				"icon": "github",
+				"url": "https://github.com/FiveFineCoders/CPP_EventMap"
+			}
+		],
+		"border": false
+	},
+	{
+		"imageKey": "apptrack",
+		"title": "AppTrack",
+		"description": "A web application to help keep track and visualize job applications.",
+		"subDescription": "→ I made this app because I needed a focused app just for applications to help in my job hunt.",
+		"skills": [
+			{ "name": "React" },
+			{ "name": "CSS" },
+			{ "name": "PyTorch" },
+			{ "name": "Gin" },
+			{ "name": "Go" },
+			{ "name": "PostgreSQL" }
+		],
+		"links": [
+			{
+				"enabled": true,
+				"name": "GitHub",
+				"icon": "github",
+				"url": "https://github.com/JohnSalinas123/AppTrack"
+			}
+		],
+		"border": false
+	},
+	{
+		"imageKey": "mybookshelf",
+		"title": "MyBookShelf",
+		"description": "A desktop electron app to help organize pdf e-books and help with the e-reading experience.",
+		"subDescription": "→ I enjoy reading learning material and I wanted a better library-like experience so I made this desktop app.",
+		"skills": [
+			{ "name": "React" },
+			{ "name": "CSS" },
+			{ "name": "PyTorch" },
+			{ "name": "Gin" },
+			{ "name": "Go" },
+			{ "name": "PostgreSQL" }
+		],
+		"links": [
+			{
+				"enabled": true,
+				"name": "GitHub",
+				"icon": "github",
+				"url": "https://github.com/JohnSalinas123/mybookshelf-2"
+			}
+		],
+		"border": false
+	}
+]

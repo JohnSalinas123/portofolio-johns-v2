@@ -1,6 +1,8 @@
-import { Container, Stack, Text, VStack } from "@chakra-ui/react";
+import { Stack, Text, VStack } from "@chakra-ui/react";
 
 import classes from "./Education.module.css";
+
+import educationData from "../../data/education.json";
 
 export function Education() {
 	return (
@@ -11,27 +13,13 @@ export function Education() {
 			>
 				<Text className="section-title"> Education</Text>
 				<Stack mt={10} gap={12} align={{ base: "center", md: "normal" }}>
-					<EducationItem
-						dateText={"07/2024 - 09/2024"}
-						titleText={"Machine Learning Specialization by Andrew Ng"}
-						descriptionText={"Coursera"}
-					/>
-
-					<EducationItem
-						dateText={"06/2022 - 08/2022"}
-						titleText={"Advanced Software Engineering Course"}
-						descriptionText={"CodePath"}
-					/>
-					<EducationItem
-						dateText={"08/2021 - 12/2023"}
-						titleText={"Bachelor of Science in Computer Science"}
-						descriptionText={"California State Polytechnic University, Pomona"}
-					/>
-					<EducationItem
-						dateText={"02/2018 - 06/2021"}
-						titleText={"Associate of Science in Computer Science"}
-						descriptionText={"Santa Monica College"}
-					/>
+					{educationData.map((education) => (
+						<EducationItem
+							dateText={education.date}
+							titleText={education.title}
+							descriptionText={education.institution}
+						/>
+					))}
 				</Stack>
 			</Stack>
 		</>

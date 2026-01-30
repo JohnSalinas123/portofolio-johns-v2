@@ -40,7 +40,7 @@ type GLTFResult = GLTF & {
 
 export function EarthGLB(props: JSX.IntrinsicElements["group"]) {
 	const { nodes, materials } = useGLTF(
-		"/models/earth.glb"
+		"/models/earth.glb",
 	) as unknown as GLTFResult;
 	return (
 		<group {...props} dispose={null}>
