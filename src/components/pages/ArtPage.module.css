@@ -1,0 +1,37 @@
+.perspective {
+	perspective: 900px;
+	width: 100%;
+	height: 100%;
+	display: block;
+	overflow: visible;
+}
+.perspective:hover .item,
+.glare {
+	transform: scale(1.1) rotateX(var(--rx)) rotateY(var(--ry));
+}
+
+.perspective:hover .glare {
+	background: radial-gradient(
+		circle at var(--x) var(--y),
+		rgba(255, 255, 255, 0.025) 10%,
+		transparent 60%
+	);
+}
+
+.item {
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transition: transform 120ms ease-out;
+	will-change: transform;
+	border-radius: 12px;
+}
+
+.glare {
+	position: absolute;
+	inset: 0;
+	height: 100%;
+	width: 100%;
+	pointer-events: none;
+	border-radius: 12px;
+}
