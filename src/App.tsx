@@ -1,7 +1,4 @@
 import "./App.css";
-import { Canvas } from "@react-three/fiber";
-import { StarsBackground } from "./components/StarsBackground";
-import { CameraRig } from "./components/CameraRig";
 import { VStack } from "@chakra-ui/react";
 
 import "./components/content/Content.css";
