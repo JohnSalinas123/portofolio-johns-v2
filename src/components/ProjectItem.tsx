@@ -9,7 +9,7 @@ import {
 	Link,
 } from "@chakra-ui/react";
 
-import classes from "./FeaturesProjects.module.css";
+import classes from "./FeaturedProjectsSection.module.css";
 import { FaGithub } from "react-icons/fa";
 import type { ReactNode } from "react";
 import { IoLogoAppleAppstore } from "react-icons/io5";
@@ -60,7 +60,7 @@ export function ProjectItem({
 						{subDescriptionText}
 					</Text> */}
 				</Stack>
-				<Flex gap={2} wrap="wrap" mt={5}>
+				<Flex gap={2} color="gray" wrap="wrap" mt={5}>
 					{skillsArray.map((skillStr) => (
 						<div key={skillStr} className="skill">
 							<Text>{skillStr}</Text>

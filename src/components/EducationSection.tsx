@@ -1,10 +1,10 @@
 import { Stack, Text, VStack } from "@chakra-ui/react";
 
-import classes from "./Education.module.css";
+import classes from "./EducationSection.module.css";
 
-import educationData from "../../data/education.json";
+import educationData from "../data/education.json";
 
-export function Education() {
+export function EducationSection() {
 	return (
 		<>
 			<Stack

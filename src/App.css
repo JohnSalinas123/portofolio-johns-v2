@@ -8,9 +8,11 @@
 	width: 100vw;
 }
 
-html {
-	color: rgb(50, 50, 50);
+html,
+body {
+	color: white !important;
 	scroll-behavior: smooth;
+	background-color: white;
 }
 
 .main-content {

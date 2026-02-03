@@ -1,11 +1,11 @@
-import { Stack, Text, SimpleGrid } from "@chakra-ui/react";
+import { Stack, Text, SimpleGrid, Box } from "@chakra-ui/react";
 
-import linguachatImage from "../../assets/projects/linguachat_image.png";
-import weeklyImage from "../../assets/projects/weekly_image.png";
-import cppeventmapImage from "../../assets/projects/cppeventmap_image.png";
-import mybookshelfImage from "../../assets/projects/mybookshelf_image.png";
-import appTrackImage from "../../assets/projects/apptrack_image.png";
-import portofolioV2Image from "../../assets/projects/portofoliov2_image.png";
+import linguachatImage from "../assets/projects/linguachat_image.png";
+import weeklyImage from "../assets/projects/weekly_image.png";
+import cppeventmapImage from "../assets/projects/cppeventmap_image.png";
+import mybookshelfImage from "../assets/projects/mybookshelf_image.png";
+import appTrackImage from "../assets/projects/apptrack_image.png";
+import portofolioV2Image from "../assets/projects/portofoliov2_image.png";
 
 const imageMap: Record<string, string> = {
 	linguachat: linguachatImage,
@@ -16,15 +16,15 @@ const imageMap: Record<string, string> = {
 	portfoliov2: portofolioV2Image,
 };
 
-import featuredProjectsData from "../../data/featured_projects.json";
+import featuredProjectsData from "../data/featured_projects.json";
 
-import classes from "./FeaturesProjects.module.css";
+import classes from "./FeaturedProjectsSection.module.css";
 import { ProjectItem } from "./ProjectItem";
 
-export function FeaturedProjects() {
+export function FeaturedProjectsSection() {
 	return (
 		<>
-			<div className={classes["featured-projects"]}>
+			<Box bg="white" className={classes["featured-projects"]}>
 				<Stack className="section" align={{ base: "center", md: "normal" }}>
 					<Text className="section-title"> Featured Projects</Text>
 					<SimpleGrid
@@ -45,7 +45,7 @@ export function FeaturedProjects() {
 						))}
 					</SimpleGrid>
 				</Stack>
-			</div>
+			</Box>
 		</>
 	);
 }

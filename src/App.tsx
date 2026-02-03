@@ -1,10 +1,10 @@
 import "./App.css";
 import { VStack } from "@chakra-ui/react";
 
-import "./components/content/Content.css";
+import "./components/Content.css";
 
 import { Navbar } from "./components/Navbar";
-import { Footer } from "./components/content/Footer";
+import { Footer } from "./components/Footer";
 import { Outlet } from "react-router";
 
 // type Parameters {

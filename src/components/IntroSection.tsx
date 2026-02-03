@@ -1,14 +1,15 @@
 import { Stack, Text, VStack } from "@chakra-ui/react";
 
-import classes from "./AboutMe.module.css";
-import { DisplayModel } from "./DisplayModel";
+import { DisplayModel } from "./three/DisplayModel";
 import { Canvas } from "@react-three/fiber";
 import { PerspectiveCamera } from "@react-three/drei/core";
-import { CameraRig } from "../CameraRig";
-import { StarsBackground } from "../StarsBackground";
+import { CameraRig } from "./three/CameraRig";
+import { StarsBackground } from "./three/StarsBackground";
 import { useEffect, useRef, useState } from "react";
 
-export function AboutMe() {
+import classes from "./IntroSection.module.css";
+
+export function IntroSection() {
 	const navRef = useRef<HTMLDivElement | null>(null);
 	const [navHeight, setNavHeight] = useState<number>(0);
 

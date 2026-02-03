@@ -1,12 +1,12 @@
 import { Heading, SimpleGrid, Stack, Tabs, useTabs } from "@chakra-ui/react";
 import { Canvas } from "@react-three/fiber";
 import { useEffect, useRef, useState } from "react";
-import { CameraRig } from "../CameraRig";
-import { StarsBackground } from "../StarsBackground";
+import { CameraRig } from "../three/CameraRig";
+import { StarsBackground } from "../three/StarsBackground";
 
 import classes from "./ProjectsPage.module.css";
 
-import { ProjectItem } from "../content/ProjectItem";
+import { ProjectItem } from "../ProjectItem";
 
 import rawData from "../../data/allprojects.json";
 import type { ProjectsData } from "../../types/projects";
@@ -47,7 +47,13 @@ export function ProjectsPage() {
 
 	return (
 		<>
-			<Stack gap={0} justify="start" align="center" className="main-content">
+			<Stack
+				color="rgb(50,50,50)"
+				gap={0}
+				justify="start"
+				align="center"
+				className="main-content"
+			>
 				<div className={classes.content}>
 					<div className="stars-background-box">
 						<Canvas eventSource={document.body} eventPrefix="client">
@@ -55,7 +61,12 @@ export function ProjectsPage() {
 							<StarsBackground count={1000} boxSize={10} objectDistance={3} />
 						</Canvas>
 					</div>
-					<Heading as="h1" size="5xl" style={{ textDecoration: "underline" }}>
+					<Heading
+						as="h1"
+						zIndex={1}
+						size="5xl"
+						style={{ textDecoration: "underline" }}
+					>
 						All Projects
 					</Heading>
 				</div>
@@ -64,21 +75,31 @@ export function ProjectsPage() {
 						<Tabs.List className={classes.triggerList} style={{ gap: "20px" }}>
 							<Tabs.Trigger
 								value="all"
-								style={{ color: tabs.value === "all" ? "black" : undefined }}
+								style={{
+									color: tabs.value === "all" ? "black" : undefined,
+									backgroundColor: tabs.value === "all" ? "white" : undefined,
+								}}
 								className={classes.tabTrigger}
 							>
 								All
 							</Tabs.Trigger>
 							<Tabs.Trigger
 								value="web"
-								style={{ color: tabs.value === "web" ? "black" : undefined }}
+								style={{
+									color: tabs.value === "web" ? "black" : undefined,
+									backgroundColor: tabs.value === "web" ? "white" : undefined,
+								}}
 								className={classes.tabTrigger}
 							>
 								Web
 							</Tabs.Trigger>
 							<Tabs.Trigger
 								value="mobile"
-								style={{ color: tabs.value === "mobile" ? "black" : undefined }}
+								style={{
+									color: tabs.value === "mobile" ? "black" : undefined,
+									backgroundColor:
+										tabs.value === "mobile" ? "white" : undefined,
+								}}
 								className={classes.tabTrigger}
 							>
 								Mobile
@@ -87,6 +108,8 @@ export function ProjectsPage() {
 								value="hobbies"
 								style={{
 									color: tabs.value === "hobbies" ? "black" : undefined,
+									backgroundColor:
+										tabs.value === "hobbies" ? "white" : undefined,
 								}}
 								className={classes.tabTrigger}
 							>
