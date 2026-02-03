@@ -2,8 +2,8 @@ import { useFrame, useThree } from "@react-three/fiber";
 import { useRef, useState } from "react";
 import * as THREE from "three";
 
-import vertexShader from "../shaders/stars/vertex.glsl";
-import fragmentShader from "../shaders/stars/fragment.glsl";
+import vertexShader from "../../shaders/stars/vertex.glsl";
+import fragmentShader from "../../shaders/stars/fragment.glsl";
 
 type StarsParameters = {
 	count: number;

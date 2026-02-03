@@ -1,10 +1,10 @@
 import { Container, Flex, Stack, Text, VStack } from "@chakra-ui/react";
 
-import classes from "./Experience.module.css";
+import classes from "./ExperienceSection.module.css";
 
-import experienceData from "../../data/experience.json";
+import experienceData from "../data/experience.json";
 
-export function Experience() {
+export function ExperienceSection() {
 	return (
 		<>
 			<div id="experience-section" className={classes.experience}>

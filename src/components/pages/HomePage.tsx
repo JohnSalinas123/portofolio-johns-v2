@@ -1,18 +1,18 @@
 import { Stack } from "@chakra-ui/react";
 
-import { AboutMe } from "../content/AboutMe";
-import { FeaturedProjects } from "../content/FeaturedProjects";
-import { Experience } from "../content/Experience";
-import { Education } from "../content/Education";
+import { IntroSection } from "../IntroSection";
+import { FeaturedProjectsSection } from "../FeaturedProjectsSection";
+import { ExperienceSection } from "../ExperienceSection";
+import { EducationSection } from "../EducationSection";
 
 export function HomePage() {
 	return (
 		<>
-			<Stack className="main-content" gap={45}>
-				<AboutMe />
-				<FeaturedProjects />
-				<Experience />
-				<Education />
+			<Stack className="main-content" color="rgb(50,50,50)" gap={0}>
+				<IntroSection />
+				<FeaturedProjectsSection />
+				<ExperienceSection />
+				<EducationSection />
 			</Stack>
 		</>
 	);
