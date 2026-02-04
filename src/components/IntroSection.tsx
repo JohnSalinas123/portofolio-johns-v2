@@ -42,10 +42,9 @@ export function IntroSection() {
 								Hi, I'm John!
 							</Text>
 							<Text className={classes.text}>
-								I’m driven by the challenge of turning ideas into intuitive
-								software people enjoy using. I focus on building thoughtful,
-								maintainable solutions while continuously growing my technical
-								skills.
+								I enjoy the process of turning ideas into software that’s
+								practical and easy to use. I focus on writing maintainable code
+								and using each project as a way to learn and refine my skills.
 							</Text>
 						</VStack>
 						<Box
