@@ -8,6 +8,7 @@ import classes from "./ProjectsPage.module.css";
 
 import { ProjectItem } from "../ProjectItem";
 
+// projects data
 import rawData from "../../data/allprojects.json";
 import type { ProjectsData } from "../../types/projects";
 
@@ -17,6 +18,10 @@ import cppeventmapImage from "../../assets/projects/cppeventmap_image.png";
 import mybookshelfImage from "../../assets/projects/mybookshelf_image.png";
 import appTrackImage from "../../assets/projects/apptrack_image.png";
 import portofolioV2Image from "../../assets/projects/portofoliov2_image.png";
+import { HobbyItem } from "../HobbyItem";
+
+// hobby data
+import hobbyData from "../../data/hobby_projects.json";
 
 const allProjectsData = rawData as ProjectsData;
 
@@ -105,15 +110,14 @@ export function ProjectsPage() {
 								Mobile
 							</Tabs.Trigger>
 							<Tabs.Trigger
-								value="hobbies"
+								value="hobby"
 								style={{
-									color: tabs.value === "hobbies" ? "black" : undefined,
-									backgroundColor:
-										tabs.value === "hobbies" ? "white" : undefined,
+									color: tabs.value === "hobby" ? "black" : undefined,
+									backgroundColor: tabs.value === "hobby" ? "white" : undefined,
 								}}
 								className={classes.tabTrigger}
 							>
-								Hobbies
+								Hobby
 							</Tabs.Trigger>
 						</Tabs.List>
 						<Tabs.Content value="all" className={classes.tabsContent}>
@@ -185,10 +189,17 @@ export function ProjectsPage() {
 								})}
 							</SimpleGrid>
 						</Tabs.Content>
-						<Tabs.Content
-							value="hobbies"
-							className={classes.tabsContent}
-						></Tabs.Content>
+						<Tabs.Content value="hobby" className={classes.tabsContent}>
+							<SimpleGrid
+								justifyItems="center"
+								columns={{ base: 1, md: 2, lg: 3 }}
+								gap="32px"
+							>
+								{hobbyData.map((item) => (
+									<HobbyItem imageSrc={item.imageSrc} />
+								))}
+							</SimpleGrid>
+						</Tabs.Content>
 					</Tabs.RootProvider>
 				</div>
 			</Stack>
