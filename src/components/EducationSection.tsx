@@ -51,7 +51,7 @@ function EducationItem({
 				<VStack
 					align="start"
 					className={classes.content}
-					width={{ base: "300px", sm: "400px" }}
+					width={{ base: "250px", sm: "400px" }}
 				>
 					<Text className={classes.title}>{titleText}</Text>
 					<Text pl={3} className={`${classes.description} colored-text`}>
