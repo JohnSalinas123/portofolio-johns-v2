@@ -45,7 +45,7 @@ export function ProjectItem({
 }: ProjectItemProps) {
 	return (
 		<>
-			<VStack align="start" gap={0}>
+			<VStack align="start" gap={0} width="100%">
 				<Image
 					className={classes.image}
 					src={imageSrc}

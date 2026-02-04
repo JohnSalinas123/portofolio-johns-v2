@@ -155,7 +155,10 @@ export function ProjectsPage() {
 								})}
 							</SimpleGrid>
 						</Tabs.Content>
-						<Tabs.Content value="web" className={classes.tabsContent}>
+						<Tabs.Content
+							value="web"
+							padding={{ base: "40px 20px", sm: "50px 40px" }}
+						>
 							<SimpleGrid
 								justifyItems="center"
 								columns={{ base: 1, md: 2, lg: 3 }}
@@ -178,7 +181,10 @@ export function ProjectsPage() {
 								})}
 							</SimpleGrid>
 						</Tabs.Content>
-						<Tabs.Content value="mobile" className={classes.tabsContent}>
+						<Tabs.Content
+							value="mobile"
+							padding={{ base: "40px 20px", sm: "50px 40px" }}
+						>
 							<SimpleGrid
 								justifyItems="center"
 								columns={{ base: 1, md: 2, lg: 3 }}
@@ -201,7 +207,10 @@ export function ProjectsPage() {
 								})}
 							</SimpleGrid>
 						</Tabs.Content>
-						<Tabs.Content value="hobby" className={classes.tabsContent}>
+						<Tabs.Content
+							value="hobby"
+							padding={{ base: "40px 20px", sm: "50px 40px" }}
+						>
 							<SimpleGrid
 								justifyItems="center"
 								columns={{ base: 1, md: 2, lg: 3 }}
