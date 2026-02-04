@@ -1,26 +1,26 @@
 [
 	{
-		"imageKey": "deskLaptopTiny",
+		"imageKey": "deskLaptop",
 		"title": "Desk with laptop",
-		"description": "",
-		"imageSrc": "../src/assets/hobby/desk_laptop_tiny.jpg"
+		"alt": "image of a 3D modeled desk with a laptop",
+		"description": ""
 	},
 	{
-		"imageKey": "christmasDonutsTiny",
+		"imageKey": "christmasDonuts",
 		"title": "Christmas Donuts",
-		"description": "",
-		"imageSrc": "../src/assets/hobby/christmas_donuts_tiny.jpg"
+		"alt": "image of a 3D modeled donut with christmas",
+		"description": ""
 	},
 	{
-		"imageKey": "lighthouseIslandTiny",
+		"imageKey": "lighthouseIsland",
 		"title": "Low-poly Lighthouse Island",
-		"description": "",
-		"imageSrc": "../src/assets/hobby/lighthouse_island_tiny.jpg"
+		"alt": "image of a 3D low poly island with a lighthouse and houses",
+		"description": ""
 	},
 	{
-		"imageKey": "modularDungeonTiny",
+		"imageKey": "modularDungeon",
 		"title": "Tiny Modular Dungeon",
-		"description": "",
-		"imageSrc": "../src/assets/hobby/modular_dungeon_tiny.jpg"
+		"alt": "image of a low poly modular dungeon",
+		"description": ""
 	}
 ]

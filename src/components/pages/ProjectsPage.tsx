@@ -9,23 +9,28 @@ import classes from "./ProjectsPage.module.css";
 import { ProjectItem } from "../ProjectItem";
 
 // projects data
-import rawData from "../../data/allprojects.json";
+import rawProjectsData from "../../data/allprojects.json";
 import type { ProjectsData } from "../../types/projects";
 
 import linguachatImage from "../../assets/projects/linguachat_image.png";
-import weeklyImage from "../../assets/projects/weekly_image.png";
-import cppeventmapImage from "../../assets/projects/cppeventmap_image.png";
-import mybookshelfImage from "../../assets/projects/mybookshelf_image.png";
-import appTrackImage from "../../assets/projects/apptrack_image.png";
-import portofolioV2Image from "../../assets/projects/portofoliov2_image.png";
+import weeklyImage from "../..//assets/projects/weekly_image.png";
+import cppeventmapImage from "../..//assets/projects/cppeventmap_image.png";
+import mybookshelfImage from "../..//assets/projects/mybookshelf_image.png";
+import appTrackImage from "../..//assets/projects/apptrack_image.png";
+import portofolioV2Image from "../..//assets/projects/portofoliov2_image.png";
 import { HobbyItem } from "../HobbyItem";
+
+const allProjectsData = rawProjectsData as ProjectsData;
+
+type ProjectKey = keyof typeof allProjectsData.projects;
 
 // hobby data
 import hobbyData from "../../data/hobby_projects.json";
 
-const allProjectsData = rawData as ProjectsData;
-
-type ProjectKey = keyof typeof allProjectsData.projects;
+import deskLaptop from "../../assets/hobby/desk_laptop_tiny.jpg";
+import christmasDonuts from "../../assets/hobby/christmas_donuts_tiny.jpg";
+import lighthouseIsland from "../../assets/hobby/lighthouse_island_tiny.jpg";
+import modularDungeon from "../../assets/hobby/modular_dungeon_tiny.jpg";
 
 const imageMap: Record<string, string> = {
 	linguachat: linguachatImage,
@@ -34,6 +39,10 @@ const imageMap: Record<string, string> = {
 	mybookshelf: mybookshelfImage,
 	apptrack: appTrackImage,
 	portfoliov2: portofolioV2Image,
+	deskLaptop: deskLaptop,
+	christmasDonuts: christmasDonuts,
+	lighthouseIsland: lighthouseIsland,
+	modularDungeon: modularDungeon,
 };
 
 export function ProjectsPage() {
@@ -196,7 +205,10 @@ export function ProjectsPage() {
 								gap="32px"
 							>
 								{hobbyData.map((item) => (
-									<HobbyItem imageSrc={item.imageSrc} />
+									<HobbyItem
+										alt={item.alt}
+										imageSrc={imageMap[item.imageKey]}
+									/>
 								))}
 							</SimpleGrid>
 						</Tabs.Content>
