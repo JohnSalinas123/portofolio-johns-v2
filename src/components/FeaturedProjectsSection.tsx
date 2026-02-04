@@ -25,7 +25,11 @@ export function FeaturedProjectsSection() {
 	return (
 		<>
 			<Box bg="white" className={classes["featured-projects"]}>
-				<Stack className="section" align={{ base: "center", md: "normal" }}>
+				<Stack
+					paddingLeft={{ base: "20px", sm: "40px" }}
+					paddingRight={{ base: "20px", sm: "40px" }}
+					paddingTop={45}
+				>
 					<Text className="section-title"> Featured Projects</Text>
 					<SimpleGrid
 						justifyItems="center"

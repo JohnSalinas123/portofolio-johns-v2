@@ -10,6 +10,9 @@ export function EducationSection() {
 			<Stack
 				className={[classes.education, "section"].join(" ")}
 				align={{ base: "center", md: "normal" }}
+				paddingLeft={{ base: "20px", sm: "40px" }}
+				paddingRight={{ base: "20px", sm: "40px" }}
+				paddingTop={45}
 			>
 				<Text className="section-title"> Education</Text>
 				<Stack mt={10} gap={12} align={{ base: "center", md: "normal" }}>
@@ -45,7 +48,11 @@ function EducationItem({
 				justify="space-between"
 			>
 				<Text className={`${classes.date} jetbrains-mono`}>{dateText}</Text>
-				<VStack align="start" className={classes.content}>
+				<VStack
+					align="start"
+					className={classes.content}
+					width={{ base: "300px", sm: "400px" }}
+				>
 					<Text className={classes.title}>{titleText}</Text>
 					<Text pl={3} className={`${classes.description} colored-text`}>
 						{descriptionText}

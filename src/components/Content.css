@@ -3,11 +3,6 @@
 	--black: #;
 }
 
-.section {
-	padding-left: 40px;
-	padding-right: 40px;
-}
-
 .section-title {
 	font-size: 26px;
 	font-weight: 500;
@@ -39,6 +34,7 @@
 
 .skill {
 	background-color: #d1d1d181;
+	color: gray;
 	padding: 1px 10px;
 	border-radius: 20px;
 	display: inline-block;
