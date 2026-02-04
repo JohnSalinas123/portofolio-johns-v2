@@ -1,12 +1,10 @@
 .featured-projects {
 	max-width: 1200px;
 	margin: 0 auto;
-	padding-top: 45px;
 }
 
 .image {
 	border-radius: 8px;
-	height: 300px;
 	width: 100%;
 	object-position: center top;
 }

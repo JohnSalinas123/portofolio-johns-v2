@@ -1,4 +1,4 @@
-import { Stack, Text, VStack } from "@chakra-ui/react";
+import { Box, Stack, Text, VStack } from "@chakra-ui/react";
 
 import { DisplayModel } from "./three/DisplayModel";
 import { Canvas } from "@react-three/fiber";
@@ -21,7 +21,7 @@ export function IntroSection() {
 
 	return (
 		<>
-			<div className={classes.aboutme} style={{ paddingTop: navHeight + 88 }}>
+			<div className={classes.home} style={{ paddingTop: navHeight + 88 }}>
 				<div className="stars-background-box">
 					<Canvas eventSource={document.body} eventPrefix="client">
 						<CameraRig objectDistance={4} />
@@ -30,7 +30,7 @@ export function IntroSection() {
 				</div>
 				<div className={classes.innerContainer}>
 					<Stack
-						gap={20}
+						gap={10}
 						className={classes.window}
 						direction={{ base: "column", md: "column", lg: "row" }}
 					>
@@ -42,13 +42,16 @@ export function IntroSection() {
 								Hi, I'm John!
 							</Text>
 							<Text className={classes.text}>
-								I’m driven by the challenge of turning ideas into intuitive
-								software people enjoy using. I focus on building thoughtful,
-								maintainable solutions while continuously growing my technical
-								skills.
+								I enjoy the process of turning ideas into software that’s
+								practical and easy to use. I focus on writing maintainable code
+								and using each project as a way to learn and refine my skills.
 							</Text>
 						</VStack>
-						<div className={classes["model-placeholder"]}>
+						<Box
+							className={classes["model-placeholder"]}
+							width={{ base: "200px", sm: "250px" }}
+							height={{ base: "200px", sm: "250px" }}
+						>
 							<Canvas
 								gl={{ alpha: true }}
 								style={{ background: "transparent" }}
@@ -56,7 +59,7 @@ export function IntroSection() {
 								<DisplayModel />
 								<PerspectiveCamera makeDefault fov={10} position={[0, 0, 44]} />
 							</Canvas>
-						</div>
+						</Box>
 					</Stack>
 				</div>
 			</div>

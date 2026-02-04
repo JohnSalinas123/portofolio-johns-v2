@@ -95,7 +95,7 @@ export function StarsBackground({
 				fragmentShader={fragmentShader}
 				uniforms={{
 					uTime: { value: 0 },
-					uSize: { value: 30 * gl.getPixelRatio() },
+					uSize: { value: 60 * gl.getPixelRatio() },
 				}}
 			/>
 		</points>

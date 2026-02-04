@@ -45,22 +45,23 @@ export function ProjectItem({
 }: ProjectItemProps) {
 	return (
 		<>
-			<VStack align="start" className={classes.container} gap={0}>
+			<VStack align="start" gap={0} width="100%">
 				<Image
 					className={classes.image}
 					src={imageSrc}
 					style={{
 						border: border ? "1px solid rgba(0,0,0,0.2)" : "none",
 					}}
+					height={{
+						base: "250px",
+						sm: "300px",
+					}}
 				/>
 				<Text className={classes.title}>{titleText}</Text>
 				<Stack gap={0} className={classes["description-container"]}>
 					<Text className={classes.description}>{descriptionText}</Text>
-					{/* <Text className={`${classes["sub-description"]} faded-text`}>
-						{subDescriptionText}
-					</Text> */}
 				</Stack>
-				<Flex gap={2} color="gray" wrap="wrap" mt={5}>
+				<Flex gap={2} wrap="wrap" mt={5}>
 					{skillsArray.map((skillStr) => (
 						<div key={skillStr} className="skill">
 							<Text>{skillStr}</Text>

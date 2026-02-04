@@ -98,7 +98,7 @@ export function Navbar() {
 				<Collapsible.Content className={classes["burger-menu"]}>
 					<VStack gap={8}>
 						<NavLink className={classes.nav} to="/" onClick={onClose}>
-							About me
+							Home
 						</NavLink>
 						<a
 							onClick={() => {
@@ -123,8 +123,6 @@ export function Navbar() {
 									<FaLinkedin />
 								</Icon>
 							</Link>
-
-							{/* <Text className={classes["text-ignore"]}>|</Text> */}
 							<Link
 								className={classes.media}
 								href="mailto: salinasjohn257@gmail.com"
@@ -135,8 +133,6 @@ export function Navbar() {
 									<IoIosMail />
 								</Icon>
 							</Link>
-
-							{/* <Text className={classes["text-ignore"]}>|</Text> */}
 							<Link
 								className={classes.media}
 								href="https://github.com/JohnSalinas123"
@@ -160,7 +156,7 @@ export function Navbar() {
 			>
 				<HStack gap={16}>
 					<NavLink className={classes.nav} to="/">
-						About me
+						Home
 					</NavLink>
 					<a
 						onClick={() => handleNavClick("experience")}

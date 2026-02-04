@@ -22,7 +22,6 @@ export function CameraRig({ objectDistance }: CameraRigProps) {
 		window.addEventListener("mousemove", (event) => {
 			cursor.current.x = event.clientX / size.width - 0.5;
 			cursor.current.y = event.clientY / size.height - 0.5;
-			// console.log("mouse move");
 		});
 
 		// Scroll

@@ -1,4 +1,4 @@
-import { Container, Flex, Stack, Text, VStack } from "@chakra-ui/react";
+import { Flex, List, Stack, Text, VStack } from "@chakra-ui/react";
 
 import classes from "./ExperienceSection.module.css";
 
@@ -8,7 +8,12 @@ export function ExperienceSection() {
 	return (
 		<>
 			<div id="experience-section" className={classes.experience}>
-				<Stack className="section" align={{ base: "center", md: "normal" }}>
+				<Stack
+					align={{ base: "center", md: "normal" }}
+					paddingLeft={{ base: "20px", sm: "40px" }}
+					paddingRight={{ base: "20px", sm: "40px" }}
+					paddingTop={45}
+				>
 					<Text className="section-title"> Experience</Text>
 					<Stack mt={10} gap={12} align={{ base: "center", lg: "normal" }}>
 						{experienceData.map((experience) => (
@@ -16,7 +21,7 @@ export function ExperienceSection() {
 								dateText={experience.date}
 								titleText={experience.title}
 								companyText={experience.company}
-								descriptionText={experience.description}
+								bulletPoints={experience.bullet_points}
 								skillsArray={experience.skills.map((s) => s.name)}
 							/>
 						))}
@@ -31,7 +36,9 @@ interface ExperienceItemProps {
 	dateText: string;
 	titleText: string;
 	companyText: string;
-	descriptionText: string;
+	bulletPoints: {
+		text: string;
+	}[];
 	skillsArray: string[];
 }
 
@@ -39,7 +46,7 @@ function ExperienceItem({
 	dateText,
 	titleText,
 	companyText,
-	descriptionText,
+	bulletPoints,
 	skillsArray,
 }: ExperienceItemProps) {
 	return (
@@ -57,9 +64,13 @@ function ExperienceItem({
 						<span className="dark-text"> @ </span>
 						<span className="colored-text">{companyText}</span>
 					</Text>
-					<Container pl={3} className="inter">
-						<Text className={classes.description}>{descriptionText}</Text>
-					</Container>
+					<VStack pl={3}>
+						<List.Root>
+							{bulletPoints.map((item) => (
+								<List.Item>{item.text}</List.Item>
+							))}
+						</List.Root>
+					</VStack>
 					<Flex gap={2} wrap="wrap" mt={2}>
 						{skillsArray.map((skillStr) => (
 							<div key={skillStr} className="skill">

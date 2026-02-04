@@ -1,4 +1,4 @@
-.aboutme {
+.home {
 	position: relative;
 	width: 100vw;
 	height: 80vh;
@@ -9,11 +9,10 @@
 
 .innerContainer {
 	max-width: 1200px;
+	padding: 0 30px;
 }
 
 .model-placeholder {
-	width: 250px;
-	height: 250px;
 	border-radius: 20px;
 	margin: 0 auto;
 }
@@ -31,7 +30,5 @@
 .window {
 	position: relative;
 	z-index: 1;
-
-	padding: 40px;
 	color: white;
 }

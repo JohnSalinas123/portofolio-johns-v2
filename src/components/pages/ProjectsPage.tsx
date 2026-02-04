@@ -72,7 +72,7 @@ export function ProjectsPage() {
 					<div className="stars-background-box">
 						<Canvas eventSource={document.body} eventPrefix="client">
 							<CameraRig objectDistance={4} />
-							<StarsBackground count={1000} boxSize={10} objectDistance={3} />
+							<StarsBackground count={800} boxSize={10} objectDistance={3} />
 						</Canvas>
 					</div>
 					<Heading
@@ -129,7 +129,10 @@ export function ProjectsPage() {
 								Hobby
 							</Tabs.Trigger>
 						</Tabs.List>
-						<Tabs.Content value="all" className={classes.tabsContent}>
+						<Tabs.Content
+							value="all"
+							padding={{ base: "40px 20px", sm: "50px 40px" }}
+						>
 							<SimpleGrid
 								justifyItems="center"
 								columns={{ base: 1, md: 2, lg: 3 }}
@@ -152,7 +155,10 @@ export function ProjectsPage() {
 								})}
 							</SimpleGrid>
 						</Tabs.Content>
-						<Tabs.Content value="web" className={classes.tabsContent}>
+						<Tabs.Content
+							value="web"
+							padding={{ base: "40px 20px", sm: "50px 40px" }}
+						>
 							<SimpleGrid
 								justifyItems="center"
 								columns={{ base: 1, md: 2, lg: 3 }}
@@ -175,7 +181,10 @@ export function ProjectsPage() {
 								})}
 							</SimpleGrid>
 						</Tabs.Content>
-						<Tabs.Content value="mobile" className={classes.tabsContent}>
+						<Tabs.Content
+							value="mobile"
+							padding={{ base: "40px 20px", sm: "50px 40px" }}
+						>
 							<SimpleGrid
 								justifyItems="center"
 								columns={{ base: 1, md: 2, lg: 3 }}
@@ -198,7 +207,10 @@ export function ProjectsPage() {
 								})}
 							</SimpleGrid>
 						</Tabs.Content>
-						<Tabs.Content value="hobby" className={classes.tabsContent}>
+						<Tabs.Content
+							value="hobby"
+							padding={{ base: "40px 20px", sm: "50px 40px" }}
+						>
 							<SimpleGrid
 								justifyItems="center"
 								columns={{ base: 1, md: 2, lg: 3 }}
