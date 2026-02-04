@@ -4,10 +4,11 @@ import { useRef } from "react";
 import classes from "./HobbyItem.module.css";
 
 interface ArtItemProps {
+	alt: string;
 	imageSrc: string;
 }
 
-export function HobbyItem({ imageSrc }: ArtItemProps) {
+export function HobbyItem({ alt, imageSrc }: ArtItemProps) {
 	const boundingRef = useRef<DOMRect | null>(null);
 	const divRef = useRef<HTMLDivElement>(null);
 
@@ -50,6 +51,7 @@ export function HobbyItem({ imageSrc }: ArtItemProps) {
 			<Box>
 				<div ref={divRef} className={classes.perspective}>
 					<Image
+						alt={alt}
 						onMouseEnter={handleMouseEnter}
 						onMouseMove={handleMouseMove}
 						onMouseLeave={handleMouseLeave}

@@ -196,7 +196,7 @@ export function ProjectsPage() {
 								gap="32px"
 							>
 								{hobbyData.map((item) => (
-									<HobbyItem imageSrc={item.imageSrc} />
+									<HobbyItem alt={item.alt} imageSrc={item.imageSrc} />
 								))}
 							</SimpleGrid>
 						</Tabs.Content>
