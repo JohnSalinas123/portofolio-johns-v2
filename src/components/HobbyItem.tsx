@@ -21,8 +21,6 @@ export function HobbyItem({ alt, imageSrc }: ArtItemProps) {
 	const handleMouseMove = (e: React.MouseEvent) => {
 		if (!boundingRef.current || !divRef.current) return;
 
-		console.log("move");
-
 		const x = e.clientX - boundingRef.current.left;
 		const y = e.clientY - boundingRef.current.top;
 
